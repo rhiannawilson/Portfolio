@@ -1,18 +1,22 @@
 * {
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
-    margin: 0px;
-    padding: 0px;
+    /* margin: 0px;
+    padding: 0px; */
+    /* @media screen and(max-width:768px) {
+        *
+    } */
 }
 
 body {
-    background-color:white;
+    /* background-color:white; */
+    margin: 0px;
+    padding: 0px;
   }
 
 /* nav: navagation bar */
 nav {
     height: 80px;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -63,71 +67,133 @@ nav {
     width: 100%;
 }
 
-header {
-    height: 150px;
-    width: 100%;
-    /* padding: 15px 20px;
-     */
-     padding: 14px 16px;
-     background-color: lightgrey;
-    position:relative;
-    align-items: center;
-}
 
 .main-container {
-    /* padding: 0px 10px; */
+    background-color:lightslategray;
+    margin: 0px;
+    height: 200px;
+    width: 100%;
+    display: flex;
     padding: 14px 16px;
-    border-style: none;
-    height: 115px;
+    border: 2px solid transparent;
 }
 
-.main-container p { 
-    color: white;
-    text-align: bottom;
-    height: 10px;
-    margin: 50px 10px;
-    padding-bottom: 20px;
-    background-color: thistle;
-    float: right;
-    border: 20px solid thistle;
+.main-container-content { 
+    color: rgb(24, 150, 148);
+    margin: 10px 40px 40px 900px;
+    padding: 10px 10px;
+    border-top: 15px;
+    font-size: 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: lightcyan;
+}
+
+.main-container p {
+    margin: 10px 20px;
+    background-color: lightcyan;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 20px 10px;
 }
 
 .main-container img {
     height: 110px;
     width: 110px;
-    /* float: left; */
-    border-style: none;
-    margin: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
 } 
 
 /* ABOUT ME SECTION */
 
-.aboutme {
-    display: block;
-    padding: 50px 50px;
-    background-color: pink;
-    margin-bottom: 5px;
+.sectionheadings {
+border: 1px solid black;    
+}
+
+/* h3 headings */
+h3 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    float: inline-start;
+    text-align: right;
+    padding-left: 30px;
+    border-right: 3px solid silver;
+    padding-right: 10px;
+    color: grey;
+
+
+}
+
+.abouth3 {
+   height: 100px;
+   width: 40px;
+   margin: 5px 5px;
+   padding: 5px 30px ; 
+   background-color: transparent;
+}
+
+p {
+    float: right;
+    padding-right: 166px;
+    /* flex-direction: row;
+    justify-content:first baseline;
+    align-items: center; */
+}
+/* .aboutmep {
+    float: right;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    align-items: first baseline;
+    padding: 20px 20px;
+    background-color: red;
+    display: inline; */
+
+    /* display: block;
+    padding: 0px 30px;
+    background-color: red; */
 }
 
 /* WORK SECTION */
 
-.work {
-    display: block;
-    padding: 50px 50px;
+/* .workh3 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    float: inline-start;
+    text-align: right;
+    padding-left: 30px;
     background-color: lightblue;
-    margin-bottom: 5px;
-}
+} */
+
 
 /* CONTACT ME SECTION */
 
-.contact {
-    display: block;
-    padding: 50px 50px;
-    background-color: springgreen;
-    margin-bottom: 5px;
-    }
+/* .contacth3 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    float: inline-start;
+    text-align: right;
+    padding-left: 30px;
+    background-color: springgreen; */
+ }
 
 
+.form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 20px 10px;
+    border: 3px solid black;
+}
 
 /*   
 .submitform {
