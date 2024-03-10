@@ -5,6 +5,9 @@
     padding: 0px;
 }
 
+body {
+    background-color:white;
+  }
 
 /* nav: navagation bar */
 nav {
@@ -27,34 +30,106 @@ nav {
     padding: 0 2rem;
 }
 
-/* nav: about, my work & contact hover effect */
-.nav-items a:hover {
-    background-color: grey;
-    color: white;
+/* nav: about, my work & contact */
+
+/* contains the box around the nav items */
+.nav-items li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-/* nav: navagtion links, about, my work & contact */
-nav a {
+/* contains the box around the list and anchor element of nav items */
+.nav-items li a {
+    text-decoration: none;
     color: grey;
-    padding: 0 0.5rem;
+    padding: 5px 0;
+    position: relative;
 }
 
+/* pseudo element */
+.nav-items li a::after {
+    content: '';
+    background: thistle;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
 
-body {
-    background-color:whitesmoke;
+/* creating a hover effect around the nav items list anchor elements */
+.nav-items li a:hover::after{
+    width: 100%;
+}
 
-  }
+header {
+    height: 150px;
+    width: 100%;
+    /* padding: 15px 20px;
+     */
+     padding: 14px 16px;
+     background-color: lightgrey;
+    position:relative;
+    align-items: center;
+}
 
-.header {
-    min-height: 60px;
+.main-container {
+    /* padding: 0px 10px; */
+    padding: 14px 16px;
+    border-style: none;
+    height: 115px;
+}
+
+.main-container p { 
+    color: white;
+    text-align: bottom;
+    height: 10px;
+    margin: 50px 10px;
+    padding-bottom: 20px;
+    background-color: thistle;
+    float: right;
+    border: 20px solid thistle;
+}
+
+.main-container img {
+    height: 110px;
+    width: 110px;
+    /* float: left; */
+    border-style: none;
+    margin: none;
+} 
+
+/* ABOUT ME SECTION */
+
+.aboutme {
+    display: block;
+    padding: 50px 50px;
+    background-color: pink;
+    margin-bottom: 5px;
+}
+
+/* WORK SECTION */
+
+.work {
+    display: block;
+    padding: 50px 50px;
+    background-color: lightblue;
+    margin-bottom: 5px;
 }
 
 /* CONTACT ME SECTION */
-/* .contact {
-    position:absolute
 
-}
+.contact {
+    display: block;
+    padding: 50px 50px;
+    background-color: springgreen;
+    margin-bottom: 5px;
+    }
 
+
+
+/*   
 .submitform {
 
 }
@@ -73,4 +148,4 @@ body {
 
 #message {
 
-} */
+}  */
