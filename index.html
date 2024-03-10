@@ -2,26 +2,48 @@
 <html>
     <head>
         <title>RMW Portfolio</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
-
 <body>
-<header>
-    <nav>
-        <ul>
-            <li>About</li>
-            <li>My Portfolio of Work</li>
-            <li>Contact Me</li>
-        </ul>
-        <h1>Rhianna Wilson's portfolio</h1>
+    <header class="header">
+    <h1>RHIANNA MW PORTFOLIO</h1>
+    </header>
+    <nav class="navbar">
+        <div class="navdiv">
+            <ul>
+                <li><a href="#" target="_self">About</a></li>
+                <li><a href="#" target="_self">My Work</a></li>
+                <li><a href="" target="_self">Contact Me</a></li>
+            </ul>          
+        </div>
     </nav>
+    
+    </nav>
+
+
+    
+
+    <main>
         <img src="./assets/images/Photo of me.jpeg" alt="a headshot of Rhianna Wilson">
         <!-- to delete after - may need to add a target attribute and value -->
         <h3><a href=""See my work here>Click here to view my work</a></h3>
-</header>
+    </main>
 
 
-
+<footer class="contact">
+    <form class="submitform">
+        <h3>Get In Touch Here</h3><br>
+        <label for="name"><strong>Name</strong></label><br>
+            <input type="text" id="name" name="name"><br>
+        <label for="email"><strong>Email</strong></label><br>
+            <input type="text" id="email" name="email"><br> 
+        <label for="subject"><strong>Subject</strong></label><br>
+            <input type="text" id="Subject" name="Subject"><br>
+        <label for="message"><strong>Message</strong></label><br>
+            <input type="text" id="message" name="message">
+    </form>   
+</footer>
 </body>
 </html>
 

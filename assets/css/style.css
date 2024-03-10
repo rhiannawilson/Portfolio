@@ -1,0 +1,39 @@
+* {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0px;
+    padding: 3px;
+}
+
+body {
+    background-color:whitesmoke;
+  }
+
+.header {
+    min-height: 60px;
+}
+
+/* CONTACT ME SECTION */
+.contact {
+    position:absolute
+
+}
+
+.submitform {
+
+}
+
+#name {
+
+}
+
+#email {
+
+}
+
+#subject {
+
+}
+
+#message {
+
+}
