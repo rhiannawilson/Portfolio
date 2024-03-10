@@ -1,11 +1,48 @@
 * {
+    box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
     margin: 0px;
-    padding: 3px;
+    padding: 0px;
 }
+
+
+/* nav: navagation bar */
+nav {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+}
+
+/* nav: logo which is RMW PORTFOLIO */
+.logo {
+    color: grey;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+/* nav: about, my work & contact hover effect */
+.nav-items a:hover {
+    background-color: grey;
+    color: white;
+}
+
+/* nav: navagtion links, about, my work & contact */
+nav a {
+    color: grey;
+    padding: 0 0.5rem;
+}
+
 
 body {
     background-color:whitesmoke;
+
   }
 
 .header {
