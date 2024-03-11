@@ -106,8 +106,6 @@ nav {
     align-items: baseline;
 } 
 
-/* ABOUT ME SECTION */
-
 .aboutsection {
     display: flex;
     flex-direction: row;
@@ -120,16 +118,19 @@ nav {
 .aboutme {
     flex-direction: row;
     justify-content: flex-end;
-    text-align: right;
-    padding-left: 0px;
     border-right: 3px solid silver;
-    padding-right: 10px;
+    padding: 10px 10px;
+    width: 20%;
     color: grey;
-
+    background-color: aqua;
+    margin: 10px 10px;
 }
 
 .para-aboutme {
     color: grey;
+    margin: 10px 10px;
+    padding: 10px 20px;
+
 }
 
 .worksection {
@@ -144,15 +145,20 @@ nav {
 .mywork {
     flex-direction: row;
     justify-content: flex-end;
-    text-align: right;
-    padding-left: 0px;
     border-right: 3px solid silver;
-    padding-right: 10px;
+    padding: 10px 10px;
+    width: 20%;
     color: grey;
+    background-color: aqua;
+    margin: 10px 10px;
+    padding-bottom: 25px;
 }
 
 .para-work {
     color: grey;
+    margin: 10px 20px;
+    padding: 10px 20px;
+
 }
 
 .contactsection {
@@ -167,15 +173,19 @@ nav {
 .contact {
     flex-direction: row;
     justify-content: flex-end;
-    text-align: right;
-    padding-left: 0px;
     border-right: 3px solid silver;
-    padding-right: 10px;
+    padding: 10px 10px;
+    width: 20%;
     color: grey;
+    background-color: aqua;
+    margin: 10px 10px;
+    padding-bottom: 25px;
 }
 
 .para-contact {
     color: grey;
+    margin: 10px 10px;
+    padding: 10px 20px;
 }
 
 /* 
