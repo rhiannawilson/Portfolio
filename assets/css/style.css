@@ -74,30 +74,27 @@ nav {
     height: 200px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     padding: 14px 16px;
     border: 2px solid transparent;
 }
 
 .main-container-content { 
     color: rgb(24, 150, 148);
-    margin: 10px 40px 40px 900px;
+    margin: 10px 15px;
     padding: 10px 10px;
-    border-top: 15px;
     font-size: 21px;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: baseline;
-    background-color: lightcyan;
 }
 
 .main-container p {
     margin: 10px 20px;
-    background-color: lightcyan;
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
     padding: 20px 10px;
+    background-color: lightcyan;
 }
 
 .main-container img {
@@ -112,22 +109,21 @@ nav {
 /* ABOUT ME SECTION */
 
 .sectionheadings {
-border: 1px solid black;    
+border: 1px solid black; 
+width: 200px;   
 }
 
 /* h3 headings */
 h3 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* align-items: baseline; */
     float: inline-start;
     text-align: right;
     padding-left: 30px;
     border-right: 3px solid silver;
     padding-right: 10px;
     color: grey;
-
-
 }
 
 .abouth3 {
@@ -138,26 +134,22 @@ h3 {
    background-color: transparent;
 }
 
-p {
+.aboutmep {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: baseline;
+    
+    /* flex-direction: row-reverse;
+    justify-content: ;
+    align-items: end;
+    background-color: transparent;
     float: right;
-    padding-right: 166px;
-    /* flex-direction: row;
-    justify-content:first baseline;
-    align-items: center; */
-}
-/* .aboutmep {
-    float: right;
-    margin: 0 5px;
-    position: relative;
-    text-align: center;
-    align-items: first baseline;
-    padding: 20px 20px;
-    background-color: red;
-    display: inline; */
+    */
+
 
     /* display: block;
     padding: 0px 30px;
-    background-color: red; */
+    /* background-color: red;  */
 }
 
 /* WORK SECTION */
