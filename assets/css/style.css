@@ -7,7 +7,7 @@
     } */
 }
 
-body {
+body, html{
     margin: 0;
     padding: 0;
     width: 100%; 
@@ -15,44 +15,44 @@ body {
     background-color: whitesmoke; 
   }
 
-/* nav: navagation bar */
-nav {
-    height: 80px;
+/* 1st Section - Header (top) */
+
+.header-nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    padding: 14px 16px;
+    height: 80px;
+    padding: 10px 1px;
     text-decoration: none;
-    font-size: 17px;
-    border-bottom: 3px solid transparent;
 }
 
-/* nav: logo which is the RMW PORTFOLIO */
 .logo {
     color: grey;
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 0 2rem;
+    padding: 10px 10px;
+  }
+
+nav ul {
+    list-style-type: none;
+    display: flex;
 }
 
-/* nav: about, my work & contact */
-
-/* contains the box around the nav items */
-.nav-items li {
-    display: inline-block;
-    margin: 0 15px;
+nav ul li {
+    margin-right: 80px;
 }
 
-/* contains the box around the list and anchor element of nav items */
-.nav-items li a {
+nav ul li a {
+    color: darkgrey;
     text-decoration: none;
-    color: grey;
-    padding: 5px 0;
-    position: relative;
-}
+    position: relative; 
+    margin-right: 20px
+} 
 
 /* pseudo element */
-.nav-items li a::after {
+
+nav ul li a::after {
     content: '';
     background: thistle;
     width: 0%;
@@ -60,18 +60,20 @@ nav {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width 0.5s;
+    transition: width 0.5s; 
 }
 
 /* creating a hover effect around the nav items list anchor elements */
-.nav-items li a:hover::after{
+
+nav ul li a:hover::after{
     width: 100%;
 }
 
-/* grey banner */
+/* 2nd Section - Grey banner */ 
+
 .main-container {
-    background-color:lightslategray;
-    margin: 0px;
+    background-color:whitesmoke;
+    margin: 0;
     height: 200px;
     width: 100%;
     display: flex;
@@ -90,24 +92,19 @@ nav {
     padding: 10px 10px;
     font-size: 21px;
 }
-
-
 .main-container img {
     height: 110px;
     width: 110px;
     margin: 10px 10px;
 } 
-
+/* 3rd Section - Middle/main Content on page */
 .aboutsection {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    text-align: right;
-    border: 1px solid silver;
     padding: 10px 10px;
 }
-
-.aboutme {
+#aboutme {
     flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
@@ -115,26 +112,22 @@ nav {
     width: 20%;
     color: grey;
     background-color: aqua;
-    margin: 10px 10px;
+    margin: 10px 10px; 
+    padding-bottom: 25px;
+    text-align: right;
 }
-
 .para-aboutme {
     color: grey;
     margin: 10px 10px;
     padding: 10px 20px;
-
 }
-
 .worksection {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    text-align: right;
-    border: 1px solid silver;
     padding: 10px 10px;
 }
-
-.mywork {
+#mywork {
     flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
@@ -144,25 +137,23 @@ nav {
     background-color: aqua;
     margin: 10px 10px;
     padding-bottom: 25px;
+    text-align: right;
 }
-
 .para-work {
     color: grey;
-    margin: 10px 20px;
+    margin: 10px 10px;
     padding: 10px 20px;
-
 }
 
 .contactsection {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    text-align: right;
-    border: 1px solid silver;
     padding: 10px 10px;
 }
 
-.contact {
+#contact {
+    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
@@ -172,6 +163,7 @@ nav {
     background-color: aqua;
     margin: 10px 10px;
     padding-bottom: 25px;
+    text-align: right;
 }
 
 .para-contact {
@@ -180,37 +172,64 @@ nav {
     padding: 10px 20px; 
 }
 
-.footer {
-    height: 100%;
-    background-color: aquamarine;
-}
-/* 
-.form {
-    flex-direction: column;
+.submitform {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    margin: 10px 20px;
-    padding: 20px 10px;
-    border: 3px solid black;
+    padding:30px 30px;
+    text-align: center;
+    color: darkgrey;
 } 
 
- 
-.submitform {
-
+label {
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
+input {
+    width: 200px;
+    padding: 10px 10px;
+    border: 1px solid darkgrey;
+    border-radius: 18px; 
+}
+ 
 #name {
-
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;
+    text-align: center;
+    color: darkgrey;
 }
 
 #email {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
 #subject {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #message {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}  
 
-}  */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80%;
+    height: 10%;
+    background-color: aquamarine;
+}
