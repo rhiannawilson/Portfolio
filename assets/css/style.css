@@ -1,10 +1,7 @@
 * {
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
-  
-    /* @media screen and(max-width:768px) {
-        *
-    } */
+    flex-wrap: wrap;
 }
 
 body, html{
@@ -12,47 +9,37 @@ body, html{
     padding: 0;
     width: 100%; 
     height: 100vh;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
   }
 
-/* 1st Section - Header (top) */
+/* 1st Section - Header and NAV (top) */
 
 .header-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    padding: 10px 1px;
-    text-decoration: none;
-}
-
-.logo {
-    color: grey;
-    font-size: 1.5rem;
-    font-weight: bold;
+    justify-content: space-between;
+    align-items: last baseline;
+    color: darkgrey;
     padding: 10px 10px;
-  }
+}
 
-nav ul {
-    list-style-type: none;
+nav {
     display: flex;
-}
-
-nav ul li {
-    margin-right: 80px;
-}
-
-nav ul li a {
+    flex-direction: row;
+    align-items: right;
     color: darkgrey;
     text-decoration: none;
-    position: relative; 
-    margin-right: 20px
-} 
+    padding: 10px 10px;
+ }
+
+ a {
+    text-decoration: none;
+    padding: 30px 50px;
+ }
 
 /* Nav List section: pseudo element used */
 
-nav ul li a::after {
+nav a::after {
     content: '';
     background: thistle;
     width: 0%;
@@ -61,41 +48,61 @@ nav ul li a::after {
     bottom: 0;
     left: 0;
     transition: width 0.5s; 
-}
+} 
 
 /*  Nav List section: creating a hover effect around the nav lists */
 
-nav ul li a:hover::after{
+nav a:hover::after{
     width: 100%;
 }
+
+.logo {
+    color: grey;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 10px;
+  }
+
 
 /* 2nd Section - Image of Web Developer and subtitle of Welcome */ 
 
 .main-container {
-    background-color:whitesmoke;
+    background-color:cadetblue;
+    border-radius: 18px;
     margin: 0;
     height: 200px;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    align-items: center;  
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid white;  
+    border-style:groove;
+    
 }
 
 .main-container-content { 
     color: rgb(24, 150, 148);
     background-color: lightcyan;
-    margin: 10px 10px;
+    margin: 20px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; 
+    align-items: left;
     padding: 10px 10px;
-    font-size: 21px;
+    border-radius: 18px;
 }
+
 .main-container img {
     height: 110px;
     width: 110px;
     margin: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right; 
+    align-items: baseline;
+    border-radius: 18px;
+
 } 
 
 
@@ -107,42 +114,62 @@ nav ul li a:hover::after{
     justify-content: space-evenly;
     padding: 10px 10px;
 }
-#aboutme {
-    flex-direction: row;
+
+#about {
+    display: flex;
+    border-right: 3px solid silver;
+    padding: 30px 83px;
+    width: 10%;
+    color: grey;
+    margin: 10px 10px;
+}
+    /* flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
     padding: 10px 10px;
     width: 10%;
     color: grey;
-    background-color: aqua;
     margin: auto;
     padding-bottom: 25px;
     text-align: right;
-}
-.para-aboutme {
+    width: auto; */
+
+
+.para-about {
     color: grey;
     margin: 10px 10px;
     padding: 10px 20px;
+    width: 85%;
 }
 .worksection {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px 10px;
-    flex-wrap: wrap;
     width: auto;
 }
 #mywork {
-    flex-direction: row;
-    justify-content: flex-end;
+    display: flex;
+    border-right: 3px solid silver;
+    padding: 10px 83px;
+    width: 10%;
+    color: grey;
+    margin: 10px 10px;
+    /* flex-direction: row;
+    justify-content: flex-end; */
+   
+    /* padding-bottom: 25px; */
+    /* text-align: right; */
+    /* flex-direction: row;
+    justify-content: flex-start;
     border-right: 3px solid silver;
     padding: 10px 10px;
     width: 10%;
     color: grey;
-    background-color: aqua;
-    margin: auto;
-    padding-bottom: 25px;
+    background-color: darkgrey;
     text-align: right;
+    position: relative; */
+
 }
 
 /* My Work Projects Section: Boxes showcasing other websites to view */
@@ -151,118 +178,100 @@ nav ul li a:hover::after{
     width: 85%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .project {
     width: 45%;
-    height: 50px;
-    background-color: aqua;
+    height: 90px;
+    background-color: cadetblue;
     display: flex;
     margin: 10px auto;
-    border: 3px solid darkgrey;
-
+    border: 3px solid silver;
+    border-radius: 80px;
+    border-style: groove;
+    padding: 60px 10px;
 }
 
 .project-1 {
-    width: 80%;
+    width: 75%;
 }
 
+/* CONTACT CONTAINER */
 .contactsection {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     padding: 10px 10px;
+    width: auto;
 }
 
+/* CONTACT HEADING (left of the page) */
 #contact {
+
     display: flex;
+    border-right: 3px solid silver;
+    padding: 10px 83px;
+    width: 10%;
+    color: grey;
+    margin: 20px 30px;
+    /* flex-direction: column;
+    justify-content: flex-end;
+    border-right: 3px solid silver;
+    padding: 10px 10px;
+    color: grey;
+    margin: 10px 10px;
+    padding-bottom: 25px;
+    text-align: right;
+    width: auto; */
+}
+    /* display: flex;
     flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
     padding: 10px 10px;
     width: 10%;
     color: grey;
-    background-color: aqua;
+    background-color: darkgrey;
     margin: auto;
     padding-bottom: 25px;
-    text-align: right;
-}
+    text-align: right; */
 
-.link-contact {
+
+.contact-links {
     color: grey;
-    margin: 10px 10px;
-    padding: 10px 20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
 }
 
 /* Contact section: Contact me input field form */
 
-form {
-    display: flex;
-    flex-direction: column;
-    flex-flow: row wrap;
-    border: 3px solid darkgrey;
-    align-items: center; 
-} 
-
-.submitform {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    flex-flow: row wrap;
+  #name {
+    padding: 10px 70px;
+    color: darkgrey;
 }
+  #email {
+    padding: 10px 100px;
+    color: darkgrey;
 
-label {
-    padding: 10px;
-}
-
-input {
-    padding: 10px 10px;
-    border: 1px solid darkgrey;
-    border-radius: 18px; 
-}
- 
-#name {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+  }
+#subject {
+    padding: 10px 130px;
     color: darkgrey;
 
 }
 
-#email {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-}
-
-#subject {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 #message {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10% 10%;
-}  
+        padding: 10px 190px 90px;
+        margin-bottom: 100px;
+        color: darkgrey;
+    }  
 
 footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-size: 80%;
     height: 10%;
-    background-color: aquamarine;
 }
 
-.linkcontainer {
-    width: 100%;
-    justify-content: space-evenly;
-    display: flex;
-}
