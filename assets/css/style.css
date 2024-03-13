@@ -50,7 +50,7 @@ nav ul li a {
     margin-right: 20px
 } 
 
-/* pseudo element */
+/* Nav List section: pseudo element used */
 
 nav ul li a::after {
     content: '';
@@ -63,13 +63,13 @@ nav ul li a::after {
     transition: width 0.5s; 
 }
 
-/* creating a hover effect around the nav items list anchor elements */
+/*  Nav List section: creating a hover effect around the nav lists */
 
 nav ul li a:hover::after{
     width: 100%;
 }
 
-/* 2nd Section - Grey banner */ 
+/* 2nd Section - Image of Web Developer and subtitle of Welcome */ 
 
 .main-container {
     background-color:whitesmoke;
@@ -97,7 +97,10 @@ nav ul li a:hover::after{
     width: 110px;
     margin: 10px 10px;
 } 
-/* 3rd Section - Middle/main Content on page */
+
+
+/* 3rd Section - The middle / main content on page */
+
 .aboutsection {
     display: flex;
     flex-direction: row;
@@ -109,10 +112,10 @@ nav ul li a:hover::after{
     justify-content: flex-end;
     border-right: 3px solid silver;
     padding: 10px 10px;
-    width: 20%;
+    width: 10%;
     color: grey;
     background-color: aqua;
-    margin: 10px 10px; 
+    margin: auto;
     padding-bottom: 25px;
     text-align: right;
 }
@@ -127,6 +130,7 @@ nav ul li a:hover::after{
     justify-content: space-evenly;
     padding: 10px 10px;
     flex-wrap: wrap;
+    width: auto;
 }
 #mywork {
     flex-direction: row;
@@ -136,14 +140,15 @@ nav ul li a:hover::after{
     width: 10%;
     color: grey;
     background-color: aqua;
-    margin: 10px 10px;
+    margin: auto;
     padding-bottom: 25px;
     text-align: right;
 }
 
+/* My Work Projects Section: Boxes showcasing other websites to view */
+
 .projectcontainer {
     width: 85%;
-    background-color: blueviolet;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -155,12 +160,12 @@ nav ul li a:hover::after{
     background-color: aqua;
     display: flex;
     margin: 10px auto;
+    border: 3px solid darkgrey;
 
 }
 
 .project-1 {
     width: 80%;
-
 }
 
 .contactsection {
@@ -176,40 +181,42 @@ nav ul li a:hover::after{
     justify-content: flex-end;
     border-right: 3px solid silver;
     padding: 10px 10px;
-    width: 20%;
+    width: 10%;
     color: grey;
     background-color: aqua;
-    margin: 10px 10px;
+    margin: auto;
     padding-bottom: 25px;
     text-align: right;
 }
 
-.para-contact {
+.link-contact {
     color: grey;
     margin: 10px 10px;
     padding: 10px 20px; 
 }
 
-.submitform {
+/* Contact section: Contact me input field form */
+
+form {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding:30px 30px;
-    text-align: center;
-    color: darkgrey;
+    flex-direction: column;
+    flex-flow: row wrap;
+    border: 3px solid darkgrey;
+    align-items: center; 
 } 
+
+.submitform {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+}
 
 label {
     padding: 10px;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 input {
-    width: 200px;
     padding: 10px 10px;
     border: 1px solid darkgrey;
     border-radius: 18px; 
@@ -218,10 +225,10 @@ input {
 #name {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
     justify-content: center;
     text-align: center;
     color: darkgrey;
+
 }
 
 #email {
@@ -241,6 +248,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 10% 10%;
 }  
 
 footer {
