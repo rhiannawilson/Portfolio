@@ -126,23 +126,41 @@ nav ul li a:hover::after{
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px 10px;
+    flex-wrap: wrap;
 }
 #mywork {
     flex-direction: row;
     justify-content: flex-end;
     border-right: 3px solid silver;
     padding: 10px 10px;
-    width: 20%;
+    width: 10%;
     color: grey;
     background-color: aqua;
     margin: 10px 10px;
     padding-bottom: 25px;
     text-align: right;
 }
-.para-work {
-    color: grey;
-    margin: 10px 10px;
-    padding: 10px 20px;
+
+.projectcontainer {
+    width: 85%;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 45%;
+    height: 50px;
+    background-color: aqua;
+    display: flex;
+    margin: 10px auto;
+
+}
+
+.project-1 {
+    width: 80%;
+
 }
 
 .contactsection {
@@ -227,9 +245,16 @@ input {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-size: 80%;
     height: 10%;
     background-color: aquamarine;
+}
+
+.linkcontainer {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
 }
