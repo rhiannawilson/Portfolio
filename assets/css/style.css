@@ -35,13 +35,15 @@ nav {
  a {
     text-decoration: none;
     padding: 30px 50px;
+    color: darkgrey;
+    border-radius: 18px;
  }
 
 /* Nav List section: pseudo element used */
 
-nav a::after {
+.header-nav nav a::after {
     content: '';
-    background: thistle;
+    background: cadetblue;
     width: 0%;
     height: 2px;
     position: absolute;
@@ -50,10 +52,13 @@ nav a::after {
     transition: width 0.5s; 
 } 
 
-/*  Nav List section: creating a hover effect around the nav lists */
+/* Nav List section: creating a hover effect around the nav lists  */
 
-nav a:hover::after{
-    width: 100%;
+
+a:hover {
+    color: cadetblue;
+    background-color: lightcyan;
+    border-radius: 18px;
 }
 
 .logo {
@@ -112,28 +117,21 @@ nav a:hover::after{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: left;
     padding: 10px 10px;
+    flex-wrap: wrap;
 }
 
 #about {
     display: flex;
+    flex-direction: row;
     border-right: 3px solid silver;
-    padding: 30px 83px;
-    width: 10%;
-    color: grey;
-    margin: 10px 10px;
-}
-    /* flex-direction: row;
-    justify-content: flex-end;
-    border-right: 3px solid silver;
-    padding: 10px 10px;
-    width: 10%;
-    color: grey;
-    margin: auto;
-    padding-bottom: 25px;
     text-align: right;
-    width: auto; */
-
+    padding: 30px 10px;
+    width: 10%;
+    color: grey;
+    margin: 10px px; 
+} 
 
 .para-about {
     color: grey;
@@ -150,26 +148,15 @@ nav a:hover::after{
 }
 #mywork {
     display: flex;
+    flex-direction: row;
+    justify-self: right;
+    text-align: left;
     border-right: 3px solid silver;
-    padding: 10px 83px;
+    padding: 30px 10px;
     width: 10%;
     color: grey;
-    margin: 10px 10px;
-    /* flex-direction: row;
-    justify-content: flex-end; */
-   
-    /* padding-bottom: 25px; */
-    /* text-align: right; */
-    /* flex-direction: row;
-    justify-content: flex-start;
-    border-right: 3px solid silver;
-    padding: 10px 10px;
-    width: 10%;
-    color: grey;
-    background-color: darkgrey;
-    text-align: right;
-    position: relative; */
-
+    margin: 10px;
+    flex-wrap: wrap;
 }
 
 /* My Work Projects Section: Boxes showcasing other websites to view */
@@ -200,72 +187,35 @@ nav a:hover::after{
 /* CONTACT CONTAINER */
 .contactsection {
     display: flex;
-    padding: 10px 10px;
-    width: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 20px;
+    text-align: left;
 }
 
 /* CONTACT HEADING (left of the page) */
 #contact {
-
     display: flex;
-    border-right: 3px solid silver;
-    padding: 10px 83px;
-    width: 10%;
-    color: grey;
-    margin: 20px 30px;
-    /* flex-direction: column;
-    justify-content: flex-end;
-    border-right: 3px solid silver;
-    padding: 10px 10px;
-    color: grey;
-    margin: 10px 10px;
-    padding-bottom: 25px;
-    text-align: right;
-    width: auto; */
-}
-    /* display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-self: right;
+    text-align: left;
     border-right: 3px solid silver;
-    padding: 10px 10px;
+    padding: 30px 10px;
     width: 10%;
     color: grey;
-    background-color: darkgrey;
-    margin: auto;
-    padding-bottom: 25px;
-    text-align: right; */
-
+}
 
 .contact-links {
     color: grey;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 85%;
-}
+    padding: 10px;
+   }
 
 /* Contact section: Contact me input field form */
 
-  #name {
-    padding: 10px 70px;
-    color: darkgrey;
-}
-  #email {
-    padding: 10px 100px;
-    color: darkgrey;
-
-  }
-#subject {
-    padding: 10px 130px;
-    color: darkgrey;
-
-}
-
-#message {
-        padding: 10px 190px 90px;
-        margin-bottom: 100px;
-        color: darkgrey;
-    }  
 
 footer {
     display: flex;
@@ -276,20 +226,17 @@ footer {
 }
  
 /* Large mobile device screens */
-  @media screen and (max-width: 768px) {
-    nav {
-    }
-  }
 
-/* Small mobile device screens */
-  @media screen and (max-width: 576px) {
-    .sample-img {
-    }
-  }
+@media screen and (max-width: 768px) {
+    /* Large mobile device screens */
+}
 
-  
+@media screen and (max-width: 576px) {
+    /* Small mobile device screens */
+}
+
   /* iPad / Tablet type devices  */
 @media screen and (max-width: 992px) {
-    header {
-    }
-  }
+      /* iPad / Tablet type devices  */
+
+}
