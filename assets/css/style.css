@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif, serif;
     flex-wrap: wrap;
+    /* border: 2px solid red; */
 }
 
 :root {
@@ -24,64 +25,43 @@ body, html{
 
 /* 1st Section - Header and NAV (top) */
 
-.header-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: last baseline;
-    color: darkgrey;
-    padding: 10px 10px;
-}
-
 nav {
     display: flex;
     flex-direction: row;
-    align-items: right;
+    justify-content: center;
     color: darkgrey;
-    text-decoration: none;
     padding: 10px 10px;
  }
 
  a {
     text-decoration: none;
-    padding: 30px 50px;
+    padding: 10px 60px;
     color: darkgrey;
     border-radius: 18px;
  }
 
+ 
 /* Nav List section: pseudo element used */
-
-.header-nav nav a::after {
+nav a::after {
     content: '';
     background: cadetblue;
     width: 0%;
-    height: 2px;
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: width 0.5s; 
+    transition: width 0.8s; 
 } 
-
 /* Nav List section: creating a hover effect around the nav lists  */
-
-
 a:hover {
     color: cadetblue;
     background-color: lightcyan;
     border-radius: 18px;
 }
 
-.logo {
-    color: grey;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px 10px;
-  }
-
 
 /* 2nd Section - Image of Web Developer and subtitle of Welcome */ 
 
-.main-container {
+header {
     background-color:cadetblue;
     border-radius: 18px;
     margin: 0;
@@ -93,10 +73,10 @@ a:hover {
     align-items: center;
     border: 2px solid white;  
     border-style:groove;
-    
+    letter-spacing: .2rem;
 }
 
-.main-container-content { 
+.headerContent { 
     color: rgb(24, 150, 148);
     background-color: lightcyan;
     margin: 20px 10px;
@@ -108,7 +88,7 @@ a:hover {
     border-radius: 18px;
 }
 
-.main-container img {
+header img {
     height: 110px;
     width: 110px;
     margin: 10px 10px;
@@ -117,12 +97,9 @@ a:hover {
     justify-content: right; 
     align-items: baseline;
     border-radius: 18px;
-
 } 
 
-
 /* 3rd Section - The middle / main content on page */
-
 .aboutsection {
     display: flex;
     flex-direction: row;
