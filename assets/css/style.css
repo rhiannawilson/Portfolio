@@ -1,10 +1,8 @@
 * {
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Raleway', sans-serif, serif;
     flex-wrap: wrap;
 }
-
-
 
 :root {
     --loader-size: 150px;
@@ -13,7 +11,7 @@
     --color-two: #FF1744;
     --color-three: #FFFF8D;
     --color-four: #B2FF59;
-    --light-size: 3px;
+    --light-size: 5px;
   }
 
 body, html{
