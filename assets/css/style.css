@@ -4,6 +4,18 @@
     flex-wrap: wrap;
 }
 
+
+
+:root {
+    --loader-size: 150px;
+    --text-color: #CECECE; /* Fill data-text */
+    --color-one: #2979FF;
+    --color-two: #FF1744;
+    --color-three: #FFFF8D;
+    --color-four: #B2FF59;
+    --light-size: 3px;
+  }
+
 body, html{
     margin: 0;
     padding: 0;
@@ -239,4 +251,113 @@ footer {
 @media screen and (max-width: 992px) {
       /* iPad / Tablet type devices  */
 
+}
+
+
+/* trial----------- */
+
+@use postcss-cssnext;
+
+
+
+.Loader {
+  position: relative;
+  width: var(--loader-size, 150px);
+  min-width: 110px;
+  overflow: visible;
+  margin: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.8);
+  
+  &::after {
+    content: attr(data-text);
+    color: var(--text-color, #CECECE);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: calc(70% + 0.10vw);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  /* Keep ratio on resize*/
+  &::before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+}
+
+
+
+.Loader__Circle {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  filter: brightness(120%);
+  animation-name: SpinAround;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  
+  
+  &:nth-of-type(1) {
+    box-shadow:
+      inset 1px 0 0 1px var(--color-one, #2979FF),
+      var(--light-size, 4px) 0 0 var(--light-size, 4px) var(--color-one, #2979FF);
+    animation-direction: reverse;
+    transform-origin: 49.6% 49.8%;
+  }
+  
+  
+  &:nth-of-type(2) {
+    box-shadow:
+      inset 1px 0 0 1px var(--color-two, #FF1744),
+      var(--light-size, 4px) 0px 0 var(--light-size, 4px) var(--color-two, #FF1744);
+    transform-origin: 49.5% 49.8%;
+  }  
+  
+  &:nth-of-type(3) {
+    box-shadow:
+      inset 1px 0 0 1px var(--color-three, #FFFF8D),
+      0 var(--light-size, 4px) 0 var(--light-size, 4px) var(--color-three, #FFFF8D);
+    transform-origin: 49.8% 49.8%;
+  }  
+  
+  &:nth-of-type(4) {
+    box-shadow:
+      inset 1px 0 0 1px var(--color-four, #B2FF59),
+      0 var(--light-size, 4px) 0 var(--light-size, 4px) var(--color-four, #B2FF59);
+    transform-origin: 49.7% 49.7%;
+  }
+}
+
+
+
+@keyframes SpinAround {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@use postcss-preset-env {
+	stage: 0;
+	browsers: [
+		"last 1 Chrome versions",
+		"last 1 Firefox versions",
+		"last 1 Safari versions",
+		"last 1 Edge versions"
+	]
 }
